@@ -1,9 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'
-import RootRouter from "./router"
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from '@/store'
+import RootRouter from "./router"
 import './index.css'
 
 const rootNode = document.getElementById('root') as HTMLElement;

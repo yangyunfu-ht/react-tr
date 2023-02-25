@@ -7,7 +7,7 @@ import { returnUrlRecord } from "@/utils/returnUrlRecord"
 
 function AppLayout() {
   const { pathname, name, age } = returnUrlRecord()
-  console.log(pathname, name, age)
+  // console.log(pathname, name, age)
   return (
     <Fragment>
       <main style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw' }} className="app-main">
