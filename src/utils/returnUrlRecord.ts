@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 export const returnUrlRecord = () => {
@@ -10,3 +11,21 @@ export const returnUrlRecord = () => {
     age
   }
 };
+
+
+// export interface RouteRecord {
+//   path: string,
+//   element: JSX.Element,
+//   name: string,
+//   title: string,
+//   children?: Array<RouteRecord>
+// }
+
+// const RouteRecordList: RouteRecord[] = [
+//   {
+//     path: '/',
+//     element: 'ef',
+//     name: 'hello',
+//     title: 'hello',
+//   }
+// ]

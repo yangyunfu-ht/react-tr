@@ -4,7 +4,7 @@ import usePagation from '@/hooks/usepagation'
 
 function Pageone() {
   const { page, pageSize, total, setPage, setTotal, setPageSize, fetchResult } = usePagation()
-  console.log(fetchResult)
+  // console.log(fetchResult)
   return (
     <Fragment>
       <div>

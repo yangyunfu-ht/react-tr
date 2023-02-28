@@ -1,5 +1,47 @@
+import HomePage from '@/views/HomePage'
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
+interface AppRouterList {
+  path: string,
+  name: string,
+  author: boolean,
+  children?: Array<AppRouterList>,
+  element?: JSX.Element
+}
+
+const AppRouterList: Array<AppRouterList> = [
+  {
+    path: '/',
+    name: '首页',
+    author: true,
+  },
+  {
+    path: '/page/1',
+    name: '星际迷航',
+    author: true,
+  },
+  {
+    path: '/page/2',
+    name: '哥斯拉大战金刚',
+    author: true,
+  },
+  {
+    path: '/page/3',
+    name: '阿凡达',
+    author: true,
+  },
+  {
+    path: '/page/4',
+    name: '康熙王朝Opps',
+    author: true,
+  },
+  {
+    path: '/opps',
+    name: '雍正王朝',
+    author: true,
+  }
+]
+
 
 function AppAside() {
   const [searchValue, setSearchValue] = useState('')
@@ -13,24 +55,13 @@ function AppAside() {
         />
       </div>
       <ul>
-        <li>
-          <Link to="/">首页</Link>
-        </li>
-        <li>
-          <Link to="/page/1">第一滴血</Link>
-        </li>
-        <li>
-          <Link to="/page/2">星际迷航</Link>
-        </li>
-        <li>
-          <Link to="/page/3">康熙王朝</Link>
-        </li>
-        <li>
-          <Link to="/page/4">大明王朝</Link>
-        </li>
-        <li>
-          <Link to="/opps">opps</Link>
-        </li>
+        {
+          AppRouterList.map(router => {
+            return <li key={router.name}>
+              <Link to={router.path}>{router.name}</Link>
+            </li>
+          })
+        }
       </ul>
     </Fragment>
   )

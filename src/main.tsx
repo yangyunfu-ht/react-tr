@@ -12,6 +12,14 @@ const root = createRoot(rootNode)
 
 console.log(import.meta.env)
 
+const person: personPropy = {
+  name: 'hello',
+  age: 36,
+  address: '',
+  phone: ''
+}
+
+
 root.render(
   <Router>
     <Provider store={store}>
@@ -19,3 +27,8 @@ root.render(
     </Provider>
   </Router>
 )
+
+
+
+
+

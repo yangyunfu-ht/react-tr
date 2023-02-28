@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { Outlet } from "react-router-dom"
+import React, { Fragment, useEffect, useState } from 'react'
+import { Outlet, useLocation } from "react-router-dom"
 import './AppLayout.css'
 
 import AppAside from './component/AppAside'
@@ -7,7 +7,13 @@ import { returnUrlRecord } from "@/utils/returnUrlRecord"
 
 function AppLayout() {
   const { pathname, name, age } = returnUrlRecord()
+  const [path, setPath] = useState(pathname)
+  const location = useLocation()
+  // console.log(location)
   // console.log(pathname, name, age)
+  useEffect(() => {
+    console.log(path)
+  }, [path])
   return (
     <Fragment>
       <main style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw' }} className="app-main">
@@ -20,7 +26,7 @@ function AppLayout() {
             header
           </header>
 
-          <section style={{ flex: '1', height: "calc(90vh - 72px)", padding: '6px'}}>
+          <section style={{ flex: '1', height: "calc(90vh - 72px)", padding: '6px', overflow: 'auto' }} className="app-main">
             <Outlet />
           </section>
 
