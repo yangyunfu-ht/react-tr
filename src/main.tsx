@@ -6,6 +6,10 @@ import store from '@/store'
 import RootRouter from "./router"
 import './index.css'
 
+import '@/utils/useScript'
+import HTTP from '@/utils/Http'
+
+
 const rootNode = document.getElementById('root') as HTMLElement;
 
 const root = createRoot(rootNode)
