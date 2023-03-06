@@ -1,18 +1,19 @@
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
 import AppLayout from '@/Layout/AppLayout'
-import Login from '@/views/Login'
 
-import PageOne from '@/views/PageOne'
-import PageTwo from '@/views/PageTwo'
-import PageThree from '@/views/PageThree'
-import PageFour from '@/views/PageFour'
-import Opps from '@/views/Opps'
-import HomePage from '@/views/HomePage'
+const HomePage = lazy(() => import('@/views/HomePage'))
+const Login = lazy(() => import('@/views/Login'))
+const PageOne = lazy(() => import('@/views/PageOne'))
+const PageTwo = lazy(() => import('@/views/PageTwo'))
+const PageThree = lazy(() => import('@/views/PageThree'))
+const PageFour = lazy(() => import('@/views/PageFour'))
+const Opps = lazy(() => import('@/views/Opps'))
 
-// const LoadComponent = (componentName: string): JSX.Element => {
-//   return lazy(() => import(`@/views/{componentName}`))
-// }
+const Loading = () => {
+  return <div>loadig....</div>
+}
+
 
 const routesRecord = [
   {
@@ -21,7 +22,9 @@ const routesRecord = [
     children: [
       {
         path: '',
-        element: <HomePage />
+        element: <Suspense fallback={<Loading />}>
+          <HomePage />
+        </Suspense>
       }
     ]
   },
@@ -31,7 +34,9 @@ const routesRecord = [
     children: [
       {
         path: '',
-        element: <Login />
+        element: <Suspense fallback={<Loading />}>
+          <Login />
+        </Suspense>
       }
     ]
   },
@@ -41,33 +46,47 @@ const routesRecord = [
     children: [
       {
         path: '',
-        element: <div>default</div>
+        element: <Suspense fallback={<Loading />}>
+          <div>
+            page
+          </div>
+        </Suspense>
       },
       {
         path: '1',
-        element: <PageOne />
+        element: <Suspense fallback={<Loading />}>
+          <PageOne />
+        </Suspense>
       },
       {
         path: '2',
-        element: <PageTwo />
+        element: <Suspense fallback={<Loading />}>
+          <PageTwo />
+        </Suspense>
       },
       {
         path: '3',
-        element: <PageThree />
+        element: <Suspense fallback={<Loading />}>
+          <PageThree />
+        </Suspense>
       },
       {
         path: '4',
-        element: <PageFour />
+        element: <Suspense fallback={<Loading />}>
+          <PageFour />
+        </Suspense>
       }
     ]
   },
   {
     path: '/opps',
-    element: <Opps />
+    element: <Suspense fallback={<Loading />}>
+      <Opps />
+    </Suspense>
   }
 ]
 
-const RootRouter = ()=> {
+const RootRouter = () => {
   return useRoutes(routesRecord)
 }
 
