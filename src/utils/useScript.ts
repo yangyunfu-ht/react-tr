@@ -62,7 +62,7 @@ const value = changeType(10)
 console.log(value)
 
 
-type num = 1 extends number ? 1 : 0
+export type num = 1 extends number ? 1 : 0
 
 type str = '1' extends string ? '1' : '0'
 

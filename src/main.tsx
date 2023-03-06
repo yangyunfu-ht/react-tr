@@ -8,6 +8,7 @@ import './index.css'
 
 import '@/utils/useScript'
 import HTTP from '@/utils/Http'
+import { zipCodeValidator} from "@/utils/speed"
 
 
 const rootNode = document.getElementById('root') as HTMLElement;
@@ -23,6 +24,8 @@ const person: personPropy = {
   phone: ''
 }
 
+
+let sym = Symbol()
 
 root.render(
   <Router>

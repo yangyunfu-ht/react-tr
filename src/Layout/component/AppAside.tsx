@@ -1,6 +1,8 @@
 import HomePage from '@/views/HomePage'
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
+import MenuRecursion from '@/components/MenuRecursion'
+import { menuRecursionList } from '@/utils/menuRecursionData'
 interface AppRouterList {
   path: string,
   name: string,
@@ -63,6 +65,7 @@ function AppAside() {
           })
         }
       </ul>
+      <MenuRecursion menu={menuRecursionList}></MenuRecursion>
     </Fragment>
   )
 }
