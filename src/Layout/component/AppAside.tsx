@@ -34,12 +34,12 @@ const AppRouterList: Array<AppRouterList> = [
   },
   {
     path: '/page/4',
-    name: '康熙王朝Opps',
+    name: '康熙王朝',
     author: true,
   },
   {
     path: '/opps',
-    name: '雍正王朝',
+    name: '雍正王朝Opps',
     author: true,
   },
   {
@@ -70,7 +70,7 @@ function AppAside() {
           })
         }
       </ul>
-      <MenuRecursion menu={menuRecursionList}></MenuRecursion>
+      {/* <MenuRecursion menu={menuRecursionList}></MenuRecursion> */}
     </Fragment>
   )
 }

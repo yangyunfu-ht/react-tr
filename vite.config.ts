@@ -29,6 +29,15 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
+    extensions: ['.js', '.ts', '.json', '.jsx', '.tsx'],
+  },
+  css: {
+    // 全局注入scss变量（可以引入多个文件），每个scss文件可以直接使用,最后面的“;”号一定要加上，不然vite css报错  vite使用sass 报错：[plugin:vite:css] expected “；“.
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/style/variable.scss"; @import "@/style/globalVariable.scss";`,
+      }
+    }
   },
   server: {
     open: true,
@@ -38,7 +47,6 @@ export default defineConfig({
         target: 'https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10',
         changeOrigin: true,
         rewrite: url => {
-          console.log(url.replace('/getList', ''))
           return url.replace('/getList', '')
         }
       }

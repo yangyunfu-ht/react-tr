@@ -1,0 +1,31 @@
+.pageThree {
+  section {
+    display: flex;
+    flex-direction: row;
+
+    div {
+      margin: 16px;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div:first-child {
+      border: 1px solid $first-level-border;
+    }
+
+    div:nth-child(2) {
+      border: 1px solid $second-level-border;
+    }
+
+    div:nth-child(3) {
+      border: 1px solid $three-level-border;
+    }
+
+    div:last-child {
+      border: 1px solid $four-level-border;
+    }
+  }
+}

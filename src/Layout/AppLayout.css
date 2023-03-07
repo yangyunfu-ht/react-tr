@@ -1,6 +1,7 @@
 .app-header {
   background-color: #DCDFE6;
   box-sizing: border-box;
+  text-align: center;
   /* box-shadow: 1px 1px 5px black; */
 }
 
@@ -18,6 +19,7 @@
 .app-footer {
   background-color: #DCDFE6;
   box-sizing: border-box;
+  text-align: center;
   /* box-shadow: 1px 1px 5px black; */
 }
 

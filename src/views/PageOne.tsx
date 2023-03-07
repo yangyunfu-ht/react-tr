@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react'
 import { copyElementValue } from '@/utils/clipBoard'
 import usePagation from '@/hooks/usepagation'
+import '@/style/pageOne.scss'
 
 function Pageone() {
   const { page, pageSize, total, setPage, setTotal, setPageSize, fetchResult } = usePagation()
   // console.log(fetchResult)
   return (
     <Fragment>
-      <div>
+      <div className="page">
         <p>
           page: {page}
           <button onClick={() => setPage(page + 1)}>changePage</button>
