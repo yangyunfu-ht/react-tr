@@ -41,6 +41,11 @@ const AppRouterList: Array<AppRouterList> = [
     path: '/opps',
     name: '雍正王朝',
     author: true,
+  },
+  {
+    path: '/editor',
+    name: '富文本编辑器',
+    author: true,
   }
 ]
 

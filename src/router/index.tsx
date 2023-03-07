@@ -9,6 +9,7 @@ const PageTwo = lazy(() => import('@/views/PageTwo'))
 const PageThree = lazy(() => import('@/views/PageThree'))
 const PageFour = lazy(() => import('@/views/PageFour'))
 const Opps = lazy(() => import('@/views/Opps'))
+const FullEditor = lazy(() => import('@/views/FullEditor'))
 
 const Loading = () => {
   return <div>loadig....</div>
@@ -36,6 +37,18 @@ const routesRecord = [
         path: '',
         element: <Suspense fallback={<Loading />}>
           <Login />
+        </Suspense>
+      }
+    ]
+  },
+  {
+    path: '/editor',
+    element: <AppLayout />,
+    children: [
+      {
+        path: '',
+        element: <Suspense fallback={<Loading />}>
+          <FullEditor />
         </Suspense>
       }
     ]

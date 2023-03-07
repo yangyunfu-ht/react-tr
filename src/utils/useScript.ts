@@ -104,8 +104,8 @@ function getProp<T, K extends keyof T>(obj: T, key: K) {
 
 const obj = { a: 1, b: 2, c: 3, d: 4, e: 5}
 
-console.log(getProp(obj, 'a'))
-console.log(getProp(obj, 'c'));
+// console.log(getProp(obj, 'a'))
+// console.log(getProp(obj, 'c'));
 
 
 interface A {
@@ -143,11 +143,11 @@ const keyofValue: keyof B =  'sex'
 const proxy = (target: any, key: any) => {
   return new Proxy(target, {
     get(target, prop, receiver) {
-      console.log("===get", prop)
+      // console.log("===get", prop)
       return Reflect.get(target, prop, receiver)
     },
     set(target, prop, value, receiver) {
-      console.log("===set", prop)
+      // console.log("===set", prop)
       return Reflect.set(target, prop, value, receiver)
     }
   })
@@ -164,7 +164,7 @@ const nameProp = logAccess({
 }, 'name')
 
 nameProp.name = nameProp.name + '11 '
-console.log(nameProp.name )
+// console.log(nameProp.name )
 
 interface animal{
   name: string

@@ -32,7 +32,7 @@ ul li a {
 }
 
 .searchInput {
-  height: 60px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +49,5 @@ ul li a {
 
 .searchInput input::placeholder {
   color: #909399;
+  text-align: center;
 }
