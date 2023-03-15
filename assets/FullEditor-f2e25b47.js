@@ -1,4 +1,4 @@
-import { a as jsx } from "./index-337494ae.js";
+import { a as jsx } from "./index-0ca6a71f.js";
 import { r as reactExports, D as Draft } from "./vender-90439cfe.js";
 const FullEditor = () => {
   const [editorState, setEditorState] = reactExports.useState(() => Draft.EditorState.createEmpty());

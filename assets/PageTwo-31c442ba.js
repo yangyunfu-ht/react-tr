@@ -1,4 +1,4 @@
-import { j as jsxs, a as jsx, i as increment, d as decrement, b as incrementBySAnmount } from "./index-337494ae.js";
+import { j as jsxs, a as jsx, i as increment, d as decrement, b as incrementBySAnmount } from "./index-0ca6a71f.js";
 import { u as useAppSelector, a as useAppDispatch } from "./useReduxtoolkit-a40837a2.js";
 import "./vender-90439cfe.js";
 function PageTwo() {

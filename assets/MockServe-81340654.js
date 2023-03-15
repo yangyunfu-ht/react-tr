@@ -1,4 +1,4 @@
-import { a as jsx } from "./index-337494ae.js";
+import { a as jsx } from "./index-0ca6a71f.js";
 import { r as reactExports, h as axios } from "./vender-90439cfe.js";
 const MockServe = () => {
   reactExports.useEffect(() => {

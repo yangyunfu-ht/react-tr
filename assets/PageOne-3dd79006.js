@@ -1,4 +1,4 @@
-import { j as jsxs, a as jsx } from "./index-337494ae.js";
+import { j as jsxs, a as jsx } from "./index-0ca6a71f.js";
 import { C as Clipboard, r as reactExports } from "./vender-90439cfe.js";
 const copyElementValue = (element) => {
   element.style.cssText += ";cursor: pointer";
