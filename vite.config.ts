@@ -5,7 +5,7 @@ import path from 'path';
 import { viteMockServe } from 'vite-plugin-mock'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [
     react(),
     // VitePluginCdnOptions({
