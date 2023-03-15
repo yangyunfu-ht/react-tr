@@ -1,5 +1,5 @@
 {
-  "name": "clound-react",
+  "name": "react-r",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "test": "vite --mode test",
     "build": "vite build",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",

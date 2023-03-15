@@ -10,6 +10,8 @@ import '@/utils/useScript'
 import HTTP from '@/utils/Http'
 import { zipCodeValidator} from "@/utils/speed"
 
+console.log(import.meta.env)
+
 
 const rootNode = document.getElementById('root') as HTMLElement;
 
