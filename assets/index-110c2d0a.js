@@ -88,7 +88,7 @@ const store = configureStore({
 });
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
-  return "/react-tr/" + dep;
+  return "/" + dep;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -215,15 +215,15 @@ function AppLayout() {
     ] })
   ] }) });
 }
-const HomePage = reactExports.lazy(() => __vitePreload(() => import("./HomePage-5189ce46.js"), true ? ["assets/HomePage-5189ce46.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const Login = reactExports.lazy(() => __vitePreload(() => import("./Login-d58327d2.js"), true ? ["assets/Login-d58327d2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const PageOne = reactExports.lazy(() => __vitePreload(() => import("./PageOne-3dd79006.js"), true ? ["assets/PageOne-3dd79006.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css","assets/PageOne-b60d32db.css"] : void 0));
-const PageTwo = reactExports.lazy(() => __vitePreload(() => import("./PageTwo-31c442ba.js"), true ? ["assets/PageTwo-31c442ba.js","assets/useReduxtoolkit-a40837a2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const PageThree = reactExports.lazy(() => __vitePreload(() => import("./PageThree-6aea8411.js"), true ? ["assets/PageThree-6aea8411.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css","assets/PageThree-3a344989.css"] : void 0));
-const PageFour = reactExports.lazy(() => __vitePreload(() => import("./PageFour-057d82a1.js"), true ? ["assets/PageFour-057d82a1.js","assets/useReduxtoolkit-a40837a2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const Oops = reactExports.lazy(() => __vitePreload(() => import("./Opps-a19d1eff.js"), true ? ["assets/Opps-a19d1eff.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const FullEditor = reactExports.lazy(() => __vitePreload(() => import("./FullEditor-f2e25b47.js"), true ? ["assets/FullEditor-f2e25b47.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
-const MockServe = reactExports.lazy(() => __vitePreload(() => import("./MockServe-81340654.js"), true ? ["assets/MockServe-81340654.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const HomePage = reactExports.lazy(() => __vitePreload(() => import("./HomePage-e58eff60.js"), true ? ["assets/HomePage-e58eff60.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const Login = reactExports.lazy(() => __vitePreload(() => import("./Login-7792b135.js"), true ? ["assets/Login-7792b135.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const PageOne = reactExports.lazy(() => __vitePreload(() => import("./PageOne-71e2127a.js"), true ? ["assets/PageOne-71e2127a.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css","assets/PageOne-b60d32db.css"] : void 0));
+const PageTwo = reactExports.lazy(() => __vitePreload(() => import("./PageTwo-8d0038e6.js"), true ? ["assets/PageTwo-8d0038e6.js","assets/useReduxtoolkit-a40837a2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const PageThree = reactExports.lazy(() => __vitePreload(() => import("./PageThree-1ef29ab3.js"), true ? ["assets/PageThree-1ef29ab3.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css","assets/PageThree-3a344989.css"] : void 0));
+const PageFour = reactExports.lazy(() => __vitePreload(() => import("./PageFour-6a8c6ce3.js"), true ? ["assets/PageFour-6a8c6ce3.js","assets/useReduxtoolkit-a40837a2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const Oops = reactExports.lazy(() => __vitePreload(() => import("./Opps-4753bae2.js"), true ? ["assets/Opps-4753bae2.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const FullEditor = reactExports.lazy(() => __vitePreload(() => import("./FullEditor-269ca67c.js"), true ? ["assets/FullEditor-269ca67c.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
+const MockServe = reactExports.lazy(() => __vitePreload(() => import("./MockServe-4eb2601f.js"), true ? ["assets/MockServe-4eb2601f.js","assets/vender-90439cfe.js","assets/vender-78ec4503.css"] : void 0));
 const Loading = () => {
   return /* @__PURE__ */ jsx("div", { children: "loading...." });
 };
@@ -321,7 +321,7 @@ const nameProp = logAccess({
   age: 40
 });
 nameProp.name = nameProp.name + "11 ";
-console.log({ "VITE_VERSION": "4.3.0", "BASE_URL": "/react-tr/", "MODE": "production", "DEV": false, "PROD": true, "SSR": false });
+console.log({ "VITE_VERSION": "4.3.0", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true, "SSR": false });
 const rootNode = document.getElementById("root");
 const root = createRoot(rootNode);
 root.render(

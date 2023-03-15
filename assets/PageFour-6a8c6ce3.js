@@ -1,4 +1,4 @@
-import { j as jsxs, a as jsx, c as changeCurrentPage, e as changePageSize } from "./index-0ca6a71f.js";
+import { j as jsxs, a as jsx, c as changeCurrentPage, e as changePageSize } from "./index-110c2d0a.js";
 import { u as useAppSelector, a as useAppDispatch } from "./useReduxtoolkit-a40837a2.js";
 import "./vender-90439cfe.js";
 function PageFour() {
