@@ -4,14 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "private": true,
-  "homepage": "https://yangyunfu-ht.github.io/react-tr/",
+  "homepage": ".",
   "scripts": {
     "dev": "vite --mode development",
     "test": "vite --mode test",
     "build": "vite build",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r git@github.com:yangyunfu-ht/react-tr.git -b gh-pages"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",

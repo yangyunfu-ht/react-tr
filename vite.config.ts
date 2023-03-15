@@ -7,7 +7,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
   console.log(command)
   return {
     root: process.cwd(),
-    base: command === 'serve' ? '/' : '/react-tr/',
+    base: '/',
     plugins: [
       react(),
       viteMockServe({
