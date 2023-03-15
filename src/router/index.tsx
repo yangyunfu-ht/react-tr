@@ -8,11 +8,12 @@ const PageOne = lazy(() => import('@/views/PageOne'))
 const PageTwo = lazy(() => import('@/views/PageTwo'))
 const PageThree = lazy(() => import('@/views/PageThree'))
 const PageFour = lazy(() => import('@/views/PageFour'))
-const Opps = lazy(() => import('@/views/Opps'))
+const Oops = lazy(() => import('@/views/Opps'))
 const FullEditor = lazy(() => import('@/views/FullEditor'))
+const MockServe = lazy(() => import('@/views/MockServe'))
 
 const Loading = () => {
-  return <div>loadig....</div>
+  return <div>loading....</div>
 }
 
 
@@ -94,8 +95,20 @@ const routesRecord = [
   {
     path: '/opps',
     element: <Suspense fallback={<Loading />}>
-      <Opps />
+      <Oops />
     </Suspense>
+  },
+  {
+    path: '/mock',
+    element: <AppLayout />,
+    children: [
+      {
+        path: '',
+        element: <Suspense fallback={<Loading />}>
+          <MockServe />
+        </Suspense>
+      }
+    ]
   }
 ]
 

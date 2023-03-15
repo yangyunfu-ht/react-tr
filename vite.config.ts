@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react'
 import path from 'path';
 // import VitePluginCdnOptions from 'vite-plugin-cdn';
+import { viteMockServe } from 'vite-plugin-mock'
 
 export default defineConfig({
   base: './',
@@ -24,6 +25,10 @@ export default defineConfig({
     //     }
     //   ]
     // })
+    viteMockServe({
+      mockPath: 'mock',
+      localEnabled: true,
+    })
   ],
   resolve: {
     alias: {

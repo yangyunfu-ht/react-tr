@@ -59,7 +59,7 @@ const changeType = (type: number) => {
 
 const value = changeType(10)
 
-console.log(value)
+// console.log(value)
 
 
 export type num = 1 extends number ? 1 : 0

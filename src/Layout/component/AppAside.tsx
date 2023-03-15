@@ -46,6 +46,11 @@ const AppRouterList: Array<AppRouterList> = [
     path: '/editor',
     name: '富文本编辑器',
     author: true,
+  },
+  {
+    path: '/mock',
+    name: 'vite-plugin-mock',
+    author: true,
   }
 ]
 

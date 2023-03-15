@@ -1,4 +1,5 @@
 import React from 'react'
+import { useMount, useUnMount } from '@/hooks/useLifeHooks'
 
 const getList = () => {
   const result = []
@@ -8,19 +9,15 @@ const getList = () => {
   return result
 }
 
-const handleDrageEnter = (e: any) => {
-  console.log(e)
-}
-
-const handleDrageEnd = (e: any) => {
-  console.log(e)
-  const { clientX, clientY, target } = e
-  target.style.offsetHeight = clientY + 'px'
-  // target.style.offsetLeft = clientX + 'px'
-  
-}
-
 function HomePage() {
+  useMount(() => {
+    console.log('page mount')
+  })
+
+  useUnMount(() => {
+    console.log('page unMount')
+  })
+
   return (
     <div>
       HomePage
@@ -31,8 +28,6 @@ function HomePage() {
               key={item}
               draggable={true}
               style={{ textAlign: 'center' }}
-              // onDragEnter={ e =>  handleDrageEnter(e) }
-              onDragEnd={ e => handleDrageEnd(e) }
             >
               {item}
             </li>

@@ -15,18 +15,6 @@ const rootNode = document.getElementById('root') as HTMLElement;
 
 const root = createRoot(rootNode)
 
-console.log(import.meta.env)
-
-const person: personPropy = {
-  name: 'hello',
-  age: 36,
-  address: '',
-  phone: ''
-}
-
-
-let sym = Symbol()
-
 root.render(
   <Router>
     <Provider store={store}>

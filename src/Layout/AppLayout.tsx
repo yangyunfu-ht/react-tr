@@ -12,7 +12,7 @@ function AppLayout() {
   // console.log(location)
   // console.log(pathname, name, age)
   useEffect(() => {
-    console.log(path)
+    // console.log(path)
   }, [path])
   return (
     <Fragment>
