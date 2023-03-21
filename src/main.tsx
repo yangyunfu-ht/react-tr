@@ -9,8 +9,10 @@ import './index.css'
 import '@/utils/useScript'
 import HTTP from '@/utils/Http'
 import { zipCodeValidator} from "@/utils/speed"
+import { toUnixPath } from './utils/toUnixPath';
 
 console.log(import.meta.env)
+console.log(toUnixPath('..\src\ss\cc'))
 
 
 const rootNode = document.getElementById('root') as HTMLElement;
